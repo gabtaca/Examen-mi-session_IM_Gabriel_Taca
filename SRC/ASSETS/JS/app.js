@@ -25,9 +25,10 @@ class Speaker {
         
         entries.forEach(entry => {
             const span = document.createElement('span');
-            span.textContent = entry[1];
+            span.textContent = entry[0] + ' : ' + entry[1];
             div.appendChild(span);
         })
+        return div
     }
 }
 
@@ -75,6 +76,6 @@ const speakers = [
     ),
 ];
 
-Speaker.forEach(Speaker =>{
+speakers.forEach(Speaker =>{
     document.body.appendChild(Speaker.toHtml());
 });
